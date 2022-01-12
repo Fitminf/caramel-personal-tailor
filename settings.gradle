@@ -1,0 +1,5 @@
+rootProject.name = 'personal-tailor'
+include 'tailor-core'
+include 'tailor-all'
+include 'tailor-database'
+
