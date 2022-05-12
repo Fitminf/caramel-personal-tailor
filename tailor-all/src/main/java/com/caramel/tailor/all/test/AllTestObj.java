@@ -14,7 +14,7 @@ public class AllTestObj {
     public void msg(){
         TestObj obj = new TestObj();
         obj.setId("123");
-        obj.setName("小明");
+        obj.setName("小猪");
         obj.msg();
     }
 

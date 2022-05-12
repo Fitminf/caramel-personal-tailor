@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven'
 }
 
 group 'com.caramel.personal-tailor'
@@ -12,8 +13,29 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+
 }
 
 test {
     useJUnitPlatform()
+}
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            // 配置仓库地址及账号密码
+            repository(url: 'http://39.108.152.104:8081/repository/pc-tailor/') {
+                authentication(userName: 'admin', password: 'admin')
+            }
+            // 配置包的相关信息
+            pom.project {
+                version '1.0.0' // 版本号
+                artifactId 'tailor-core' // 包名
+                groupId 'com.caramel.personal-tailor' // 组名
+                packaging 'jar' // 包类型
+                description 'tailor-core' // 描述
+            }
+        }
+    }
 }

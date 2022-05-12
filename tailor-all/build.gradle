@@ -1,9 +1,47 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "6.1.0"
 }
+
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'maven'
+
 group 'com.caramel.personal-tailor'
-version '1.0.0'
+version '1.0.2'
 
 dependencies {
     compile project(':tailor-core')
 }
+
+
+// 打包配置
+shadowJar {
+    configurations = [project.configurations.compileClasspath]
+
+    def name  = 'tailor-all'
+   // def version = '1.0.0'
+    archiveBaseName.set(name)
+    archiveClassifier.set('')
+    archiveVersion.set('')
+    destinationDirectory.set(new File("/Users/fitminf/private/server/personal-maven/com/caramel/personal-tailor/${name}/1.0.0"))
+
+}
+
+publishing {
+    publications {
+        shadow(MavenPublication) { publication ->
+            project.shadow.component(publication)
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username 'admin'
+                password 'admin'
+            }
+            url "http://39.108.152.104:8081/repository/pc-tailor/"
+        }
+    }
+}
+
+
