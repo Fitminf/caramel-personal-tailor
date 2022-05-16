@@ -1,6 +1,5 @@
 package test.com.caramel.tailor.core.util;
 
-import com.caramel.tailor.core.annotation.TailorDoc;
 import org.junit.jupiter.api.Test;
 import test.com.caramel.tailor.core.util.entity.TailorDocDemo;
 
