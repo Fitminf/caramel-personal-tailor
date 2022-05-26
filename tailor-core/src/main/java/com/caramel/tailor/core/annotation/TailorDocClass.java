@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  * TailorDoc
  * <p>
- * 改注解用于标记一个仅仅用于作为解释说明的类
+ * 该注解用于标记一个仅仅用于作为解释说明的类
  *
  * @author Fitminf
  * @since 2022-05-14 01:02

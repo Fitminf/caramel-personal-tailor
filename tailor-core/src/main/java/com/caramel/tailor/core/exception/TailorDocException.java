@@ -11,6 +11,6 @@ package com.caramel.tailor.core.exception;
 public class TailorDocException extends TailorException{
 
     public TailorDocException() {
-        super("无法创建被 @TailorDocClass 注解标记的实例");
+        super("无法创建继承 TailorDocHandler 的实例，该类是一个 doc，请不要乱 new ！！！");
     }
 }
