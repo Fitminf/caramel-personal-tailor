@@ -1,4 +1,4 @@
-rootProject.name = 'personal-tailor'
+rootProject.name = 'caramel-personal-tailor'
 include 'tailor-core'
 include 'tailor-all'
 include 'tailor-database'
