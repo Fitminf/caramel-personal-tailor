@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'maven'
 }
 
 group 'com.caramel.personal-tailor'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -15,6 +16,27 @@ dependencies {
     implementation 'com.itextpdf:itext-asian:5.2.0'
 }
 
+
 test {
     useJUnitPlatform()
+}
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            // 配置仓库地址及账号密码
+            repository(url: 'http://39.108.152.104:8081/repository/pc-tailor/') {
+                authentication(userName: 'admin', password: 'admin')
+            }
+            // 配置包的相关信息
+            pom.project {
+                version '1.0.1' // 版本号
+                artifactId 'tailor-file' // 包名
+                groupId 'com.caramel.personal-tailor' // 组名
+                packaging 'jar' // 包类型
+                description 'tailor-file' // 描述
+            }
+        }
+    }
 }

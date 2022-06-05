@@ -29,7 +29,9 @@ allprojects {
 
     dependencies {
         // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent
-        testImplementation 'junit:junit:4.12'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+
         implementation 'org.projectlombok:lombok:1.18.22'
         annotationProcessor 'org.projectlombok:lombok:1.18.22'
         implementation 'org.apache.commons:commons-lang3:3.12.0'

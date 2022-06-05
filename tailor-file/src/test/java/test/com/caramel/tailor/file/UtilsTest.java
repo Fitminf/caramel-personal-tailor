@@ -1,8 +1,9 @@
 package test.com.caramel.tailor.file;
 
 import com.caramel.tailor.file.office.convertor.HTMLToPDFUtil;
+import com.caramel.tailor.file.utils.TailorResourceUtil;
 import com.itextpdf.text.DocumentException;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
@@ -27,4 +28,11 @@ public class UtilsTest {
         HTMLToPDFUtil.htmlToPdf(htmlPath, outPath);
     }
 
+    /**
+     * 测试
+     */
+    @Test
+    public void testTailorResourceUtil(){
+        System.out.println(TailorResourceUtil.classpath("asd/sss"));
+    }
 }
