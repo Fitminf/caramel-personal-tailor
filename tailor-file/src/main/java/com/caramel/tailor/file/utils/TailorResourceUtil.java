@@ -21,7 +21,13 @@ public class TailorResourceUtil {
      * @return 路径
      */
     public static String classpath(String childrenProjectName) {
-        return System.getProperty("user.dir") + "/" + childrenProjectName + "/src/main/resources";
+        if (StringUtils.isEmpty(childrenProjectName)) {
+            return null;
+        }
+        if (!childrenProjectName.startsWith("/")) {
+            childrenProjectName = "/" + childrenProjectName;
+        }
+        return System.getProperty("user.dir") + childrenProjectName + "/src/main/resources";
     }
 
     /**
@@ -32,13 +38,22 @@ public class TailorResourceUtil {
      * @return 路径
      */
     public static String classpath(String childrenProjectName, String path) {
-        if (StringUtils.isNotEmpty(path) && !path.startsWith("/")) {
+        if (StringUtils.isEmpty(childrenProjectName)) {
+            return null;
+        }
+        if (StringUtils.isEmpty(path)) {
+            return classpath(childrenProjectName);
+        }
+        if (!childrenProjectName.startsWith("/")) {
+            childrenProjectName = "/" + childrenProjectName;
+        }
+        if (!path.startsWith("/")) {
             path = "/" + path;
         }
-        return new File("").getAbsolutePath() + "/" + childrenProjectName + "/src/main/resources" + path;
+        return new File("").getAbsolutePath() + childrenProjectName + "/src/main/resources" + path;
     }
 
     public static void main(String[] args) {
-        System.out.println(classpath("tailor-file"));
+        System.out.println(classpath("tailor-file","aaa"));
     }
 }

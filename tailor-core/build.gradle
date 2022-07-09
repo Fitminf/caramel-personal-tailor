@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.caramel.personal-tailor'
-version '1.0.5'
+version '1.0.6'
 
 repositories {
     mavenCentral()
@@ -26,7 +26,7 @@ uploadArchives {
             }
             // 配置包的相关信息
             pom.project {
-                version '1.0.5' // 版本号
+                version '1.0.6' // 版本号
                 artifactId 'tailor-core' // 包名
                 groupId 'com.caramel.personal-tailor' // 组名
                 packaging 'jar' // 包类型

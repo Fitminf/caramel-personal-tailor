@@ -18,6 +18,6 @@ public class TailorEnumUtil {
      * @return toString
      */
     public static String getObjectToString(Enum<?> e) {
-        return e.getClass().getName() + "@" + Integer.toHexString(e.hashCode());
+        return TailorObjectUtil.getObjectToString(e);
     }
 }
