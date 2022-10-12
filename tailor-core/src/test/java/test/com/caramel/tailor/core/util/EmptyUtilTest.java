@@ -1,6 +1,6 @@
 package test.com.caramel.tailor.core.util;
 
-import com.caramel.tailor.core.util.TailorEmptyUtil;
+import com.caramel.tailor.core.util.EmptyUtil;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * TailorEmptyUtilTest
+ * EmptyUtilTest
  *
  * @author Fitminf
  * @since 2022-05-14 00:38
  */
-public class TailorEmptyUtilTest {
+public class EmptyUtilTest {
 
     /**
      * 测试字符串
@@ -22,7 +22,7 @@ public class TailorEmptyUtilTest {
     @Test
     public void testStringEmpty(){
         String s = "";
-        System.out.println(TailorEmptyUtil.isEmpty(s));
+        System.out.println(EmptyUtil.isEmpty(s));
     }
 
     /**
@@ -32,7 +32,7 @@ public class TailorEmptyUtilTest {
     public void testCollectionEmpty(){
         List<String> list = new ArrayList<>();
         list.add("");
-        System.out.println(TailorEmptyUtil.isEmpty(list));
+        System.out.println(EmptyUtil.isEmpty(list));
     }
 
     /**
@@ -42,7 +42,7 @@ public class TailorEmptyUtilTest {
     public void testMapEmpty(){
         Map<String,String> map = new HashMap<>();
         map.put("", "");
-        System.out.println(TailorEmptyUtil.isEmpty(map));
+        System.out.println(EmptyUtil.isEmpty(map));
     }
 
     /**
@@ -51,7 +51,7 @@ public class TailorEmptyUtilTest {
     @Test
     public void testArrayEmpty(){
         String[] nums = new String[0];
-        System.out.println(TailorEmptyUtil.isEmpty(nums));
+        System.out.println(EmptyUtil.isEmpty(nums));
     }
 
     /**
@@ -60,7 +60,7 @@ public class TailorEmptyUtilTest {
     @Test
     public void testObjectEmpty(){
         Object o = null;
-        System.out.println(TailorEmptyUtil.isEmpty(o));
+        System.out.println(EmptyUtil.isEmpty(o));
     }
 
 }

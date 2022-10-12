@@ -3,6 +3,7 @@ package com.caramel.tailor.file.utils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
+import java.io.InputStream;
 
 /**
  * TailorResourceUtil
@@ -54,6 +55,6 @@ public class TailorResourceUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(classpath("tailor-file","aaa"));
+        System.out.println();
     }
 }

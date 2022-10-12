@@ -10,14 +10,14 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * TailorEmptyUtil
+ * EmptyUtil
  * <p>
  * 统一判空入口
  *
  * @author Fitminf
  * @since 2022-05-14 00:23
  */
-public class TailorEmptyUtil {
+public class EmptyUtil {
 
     /**
      * 字符串判空

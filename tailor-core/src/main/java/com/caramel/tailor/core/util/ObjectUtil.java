@@ -1,14 +1,14 @@
 package com.caramel.tailor.core.util;
 
 /**
- * TailorObjectUtil
+ * ObjectUtil
  * <p>
  * 对象工具
  *
  * @author Fitminf
  * @since 2022-06-08 00:17
  */
-public class TailorObjectUtil {
+public class ObjectUtil {
 
     /**
      * 当重写 toString 方法时，当想输出 Object 的 toString 时使用。

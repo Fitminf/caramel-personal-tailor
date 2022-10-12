@@ -1,6 +1,5 @@
 package com.caramel.tailor.core.exception;
 
-import com.caramel.tailor.core.util.TailorEmptyUtil;
 
 /**
  * TailorParameterException
@@ -10,9 +9,9 @@ import com.caramel.tailor.core.util.TailorEmptyUtil;
  * @author Fitminf
  * @since 2022-05-30 23:46
  */
-public class TailorParameterException extends TailorException {
+public class ParameterException extends CustomException {
 
-    public TailorParameterException(String message) {
+    public ParameterException(String message) {
         super(message);
     }
 }

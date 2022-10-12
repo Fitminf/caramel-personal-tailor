@@ -1,7 +1,7 @@
 package test.com.caramel.tailor.core.util.entity;
 
-import com.caramel.tailor.core.annotation.TailorDocClass;
-import com.caramel.tailor.core.exception.TailorDocException;
+import com.caramel.tailor.core.annotation.DocClass;
+import com.caramel.tailor.core.exception.DocException;
 
 /**
  * TailorDocDemo
@@ -9,10 +9,10 @@ import com.caramel.tailor.core.exception.TailorDocException;
  * @author Fitminf
  * @since 2022-05-14 01:11
  */
-@TailorDocClass
+@DocClass
 public class TailorDocDemo {
 
     public TailorDocDemo() {
-        throw new TailorDocException();
+        throw new DocException();
     }
 }
