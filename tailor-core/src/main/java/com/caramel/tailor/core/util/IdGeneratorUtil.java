@@ -1,6 +1,6 @@
 package com.caramel.tailor.core.util;
 
-import cn.hutool.core.lang.UUID;
+import cn.hutool.core.util.IdUtil;
 
 /**
  * IdGeneratorUtil
@@ -13,11 +13,23 @@ import cn.hutool.core.lang.UUID;
 public class IdGeneratorUtil {
 
     /**
-     * 生成 uuid
+     * 获取唯一 id（UUID）
+     * <p>
+     * 去除横线
      *
      * @return uuid
      */
-    public static String getUuid() {
-        return UUID.randomUUID().toString(true);
+    public static String getIdByUUID() {
+        return IdUtil.fastSimpleUUID();
     }
+
+    /**
+     * 获取唯一 id（雪花算法）
+     *
+     * @return uuid
+     */
+    public static Long getIdBySnowflake() {
+        return IdUtil.getSnowflakeNextId();
+    }
+
 }
